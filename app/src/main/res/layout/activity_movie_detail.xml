@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/activity_movie_detail"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/glPoster"
+            android:layout_marginTop="10dp"
+            android:layout_height="180dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:scaleType="fitXY"
+                android:id="@+id/ivPoster" />
+
+            <ImageView
+                android:id="@+id/ivVideoPreviewPlayButton"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/play_button" />
+        </FrameLayout>
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/glPoster"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="26dp"
+            android:padding="10dp"
+            android:id="@+id/tvTitle"
+            android:background="@color/colorPrimaryDark"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            tools:text="Hardcore Henry" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#66666666"
+    android:padding="10dp"
+    android:layout_alignLeft="@+id/tvTitle"
+    android:layout_below="@id/tvTitle"
+    android:layout_alignStart="@id/tvTitle"
+    android:layout_alignEnd="@id/tvTitle"
+    android:layout_alignRight="@id/tvTitle">
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvOverView"
+        tools:text="Henry a new ressurected  cyborg who must save his wife"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOverView"
+        android:layout_alignLeft="@id/tvOverView"
+        android:layout_alignStart="@id/tvOverView"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rbMovieRating"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="5"
+        android:textColor="@android:color/white"/>
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rbMovieRating"
+            android:layout_alignLeft="@id/rbMovieRating"
+            android:layout_alignStart="@id/rbMovieRating"
+            android:layout_marginTop="26dp"
+            android:id="@+id/tvReleaseDate"
+            tools:text="Release Date:2016-04-07"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/tvpopularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Popularity: 14"
+            android:layout_below="@id/tvReleaseDate"
+            android:layout_alignLeft="@id/tvReleaseDate"
+            android:layout_alignStart="@id/tvReleaseDate"
+
+            />
+
+
+
+</RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
