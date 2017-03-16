@@ -73,7 +73,6 @@ public class MovieDetailActivity extends AppCompatActivity {
         tvOverView.setText(movie.getOverview());
         tvReleaseDate.setText("Release Date: " + movie.getRelease_date());
         rbRating.setRating(movie.getVoteAverage() / 2);
-
         if(movie.getTrailerURL()!=null){
             ivPlayButton.setVisibility(View.VISIBLE);
             // set up listerner for handling clicks on the play button.
