@@ -73,17 +73,18 @@ public class MovieDetailActivity extends AppCompatActivity {
         tvOverView.setText(movie.getOverview());
         tvReleaseDate.setText("Release Date: " + movie.getRelease_date());
         rbRating.setRating(movie.getVoteAverage() / 2);
-    if(movie.getTrailerURL()!=null){
-        ivPlayButton.setVisibility(View.VISIBLE);
-        // set up listerner for handling clicks on the play button.
-        ivPlayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MovieDetailActivity.this, QuickPlayActivity.class);
-                intent.putExtra(SELECTED_MOVIE_TRAILER_URL, movie.getTrailerURL());
-                startActivityForResult(intent, SHOW_MOVIE_TRAILER_REQUEST);
-            }
-        });
+
+        if(movie.getTrailerURL()!=null){
+            ivPlayButton.setVisibility(View.VISIBLE);
+            // set up listerner for handling clicks on the play button.
+            ivPlayButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MovieDetailActivity.this, QuickPlayActivity.class);
+                    intent.putExtra(SELECTED_MOVIE_TRAILER_URL, movie.getTrailerURL());
+                    startActivityForResult(intent, SHOW_MOVIE_TRAILER_REQUEST);
+                }
+            });
 }
 }
 
