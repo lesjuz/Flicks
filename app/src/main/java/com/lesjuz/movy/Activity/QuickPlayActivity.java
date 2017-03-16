@@ -19,7 +19,7 @@ import butterknife.ButterKnife;
 public class QuickPlayActivity extends YouTubeBaseActivity {
 
     private static final String  SELECTED_MOVIE_TRAILER_URL = "SELECTED_MOVIE_TRAILER_URL";
-    private static final String  API_KEY = "AIzaSyBabm9IhlRnW5J_S4vM6BmHO3SlrcFSYzI";
+    private static final String  API_KEY = "AIzaSyC5NWG3OG3SeDlFOcpqeo2iSWCQqxeD_Fo";
 
     @BindView(R.id.player)
     YouTubePlayerView youTubePlayerView;

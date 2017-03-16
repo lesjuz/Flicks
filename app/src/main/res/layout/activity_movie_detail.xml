@@ -38,7 +38,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
-                android:src="@mipmap/play_button" />
+                android:src="@mipmap/play_button"
+                android:visibility="gone"/>
         </FrameLayout>
 
         <TextView

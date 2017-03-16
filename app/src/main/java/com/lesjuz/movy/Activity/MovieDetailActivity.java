@@ -67,13 +67,14 @@ public class MovieDetailActivity extends AppCompatActivity {
         Picasso picasso = new Picasso.Builder(getApplicationContext()).downloader(new OkHttp3Downloader(client)).build();
         // populate the views
         picasso.load(movie.getBackDropUrl())
-                .transform(new RoundedCornersTransformation(10, 10))
+                .transform(new RoundedCornersTransformation(10, 10)).placeholder(R.mipmap.movie_placeholder)
                 .into(ivPoster);
         tvTitle.setText(movie.getTitle());
         tvOverView.setText(movie.getOverview());
         tvReleaseDate.setText("Release Date: " + movie.getRelease_date());
         rbRating.setRating(movie.getVoteAverage() / 2);
-
+    if(movie.getTrailerURL()!=null){
+        ivPlayButton.setVisibility(View.VISIBLE);
         // set up listerner for handling clicks on the play button.
         ivPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,5 +84,8 @@ public class MovieDetailActivity extends AppCompatActivity {
                 startActivityForResult(intent, SHOW_MOVIE_TRAILER_REQUEST);
             }
         });
-    }
+}
+}
+
+
 }
